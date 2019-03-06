@@ -3,6 +3,25 @@
 
 ### Enhancements
 
+* `Realm.asyncOpen()` and `-[RLMRealm asyncOpenWithConfiguration:]` now use an
+  optimized download system for fetching the initial state of a Realm from the
+  server which uses less bandwidth and CPU time on both the client and server
+  sides.
+
+### Fixed
+* <How to hit and notice issue? what was the impact?> ([#????](https://github.com/realm/realm-js/issues/????), since v?.?.?)
+* None.
+
+<!-- ### Breaking Changes - ONLY INCLUDE FOR NEW MAJOR version -->
+
+### Compatibility
+* File format: Generates Realms with format v9 (Reads and upgrades all previous formats)
+* Realm Object Server: 4.0.0 or later.
+* APIs are backwards compatible with all previous releases in the 3.x.y series.
+
+x.y.z Release notes (yyyy-MM-dd)
+=============================================================
+### Enhancements
 * Reduce memory usage when committing write transactions.
 * Improve performance of compacting encrypted Realm files.
   ([PR #3221](https://github.com/realm/realm-core/pull/3221)).
